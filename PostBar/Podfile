@@ -8,7 +8,8 @@ target 'PostBar' do
   # Pods for PostBar
    pod 'Masonry'
    pod 'PPNetworkHelper'
-   pod 'SDWebImage'
+   pod 'SDWebImage','4.4.6'
+   pod 'MJExtension'
    pod 'WMPageController'
    pod 'TZImagePickerController'
    pod 'RTRootNavigationController'

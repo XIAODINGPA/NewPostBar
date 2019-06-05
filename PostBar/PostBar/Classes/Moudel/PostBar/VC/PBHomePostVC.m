@@ -10,21 +10,55 @@
 #import "PBLoginVC.h"
 #import "PBReleasePostInfoVC.h"
 #import "PBBasePostListVC.h"
+#import "Masonry.h"
 @interface PBHomePostVC ()
+
+/**
+ 底部悬浮按钮
+ */
+@property (nonatomic, strong) UIButton *bottomBtn;
 
 @end
 
 @implementation PBHomePostVC
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.navigationItem.title = @"互动";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"登录" style:UIBarButtonItemStyleDone target:self action:@selector(loginAction)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"发帖" style:UIBarButtonItemStyleDone target:self action:@selector(postAction)];
+- (instancetype)init{
+    self = [super init];
+    if(self){
+        self.menuViewStyle = WMMenuViewStyleLine;
+        self.progressColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.7];
+        self.progressViewIsNaughty = 0.5;
+        self.titleColorSelected = [UIColor blackColor];
+        self.titleColorNormal = [UIColor colorWithWhite:53.f/255 alpha:1];
+        self.titleSizeSelected = 20;
+        self.titleSizeNormal = 17;
+        self.progressWidth = 40;
+        self.progressHeight = 4;
+    }
+    return self;
 
-    // Do any additional setup after loading the view.
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.navigationItem.title = @"互动吧";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@""] style:UIBarButtonItemStyleDone target:self action:@selector(loginAction)];
+    self.navigationItem.rightBarButtonItem =  [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@""] style:UIBarButtonItemStyleDone target:self action:@selector(postAction)];
+    [self.view addSubview:self.bottomBtn];
+    [self.view bringSubviewToFront:self.bottomBtn];
+    [self.bottomBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.view.mas_right).offset(-20);
+        if (@available(iOS 11.0, *)) {
+            make.bottom.mas_equalTo(self.view.safeAreaInsets.bottom).offset(-49);
+        } else {
+            // Fallback on earlier versions
+            make.bottom.mas_equalTo(self.view.mas_bottom).offset(-49);
+
+        }
+        make.size.mas_equalTo(CGSizeMake(65, 65));
+    }];
+    // Do any additional setup after loading the view.
+}
 
 #pragma mark - Action
 - (void)loginAction{
@@ -46,7 +80,7 @@
 }
 
 - (NSString *)pageController:(WMPageController *)pageController titleAtIndex:(NSInteger)index {
-    switch (index % 3) {
+    switch (index) {
         case 0: return @"最新";
         case 1: return @"热贴";
         case 2: return @"图说";
@@ -57,8 +91,25 @@
 }
 
 - (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index {
-   
-    return [[PBBasePostListVC alloc] init];
+    //8 6 7 5
+    PBBasePostListVC *postListVC = [[PBBasePostListVC alloc] init];
+    switch (index) {
+        case 0:
+            postListVC.classId = @"8";
+            break;
+        case 1:
+            postListVC.classId = @"6";
+            break;
+        case 2:
+            postListVC.classId = @"7";
+            break;
+        case 3:
+            postListVC.classId = @"5";
+            break;
+        default:
+            break;
+    }
+    return postListVC;
 }
 
 - (CGFloat)menuView:(WMMenuView *)menu widthForItemAtIndex:(NSInteger)index {
@@ -83,6 +134,20 @@
     CGFloat originY = CGRectGetMaxY([self pageController:pageController preferredFrameForMenuView:self.menuView]);
   
     return CGRectMake(0, originY, self.view.frame.size.width, self.view.frame.size.height - originY);
+}
+
+
+- (UIButton *)bottomBtn{
+    if(_bottomBtn == nil){
+        _bottomBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _bottomBtn.backgroundColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.7];
+        [_bottomBtn setTitle:@"Go" forState:UIControlStateNormal];
+        [_bottomBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        _bottomBtn.titleLabel.font = [UIFont systemFontOfSize:18];
+        _bottomBtn.layer.cornerRadius = 65.f/2;
+        
+    }
+    return _bottomBtn;
 }
 
 

@@ -27,6 +27,8 @@
 		1506FDA222A658ED00FD4255 /* PBForgetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1506FDA122A658ED00FD4255 /* PBForgetPasswordVC.m */; };
 		1506FDA622A6603500FD4255 /* PBPostListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1506FDA522A6603500FD4255 /* PBPostListCell.m */; };
 		1506FDA922A660B500FD4255 /* PBPostListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1506FDA822A660B500FD4255 /* PBPostListModel.m */; };
+		1512B97F22A79B190025C36A /* PBPostGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B97E22A79B190025C36A /* PBPostGridView.m */; };
+		1512B98522A79EC50025C36A /* PBCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B98422A79EC50025C36A /* PBCollectionViewCell.m */; };
 		874BF1A4523E08D5B379D2DA /* libPods-PostBarTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D494269FA4759B3CC631E4 /* libPods-PostBarTests.a */; };
 		8E5927DA3C3E7C89C02B2FD4 /* libPods-PostBarUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73286A9005AC74606C2207F4 /* libPods-PostBarUITests.a */; };
 /* End PBXBuildFile section */
@@ -87,6 +89,10 @@
 		1506FDA522A6603500FD4255 /* PBPostListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBPostListCell.m; sourceTree = "<group>"; };
 		1506FDA722A660B500FD4255 /* PBPostListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBPostListModel.h; sourceTree = "<group>"; };
 		1506FDA822A660B500FD4255 /* PBPostListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBPostListModel.m; sourceTree = "<group>"; };
+		1512B97D22A79B190025C36A /* PBPostGridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBPostGridView.h; sourceTree = "<group>"; };
+		1512B97E22A79B190025C36A /* PBPostGridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBPostGridView.m; sourceTree = "<group>"; };
+		1512B98322A79EC50025C36A /* PBCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBCollectionViewCell.h; sourceTree = "<group>"; };
+		1512B98422A79EC50025C36A /* PBCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBCollectionViewCell.m; sourceTree = "<group>"; };
 		2EBA2394692D0DDB31391EA4 /* Pods-PostBarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostBarUITests.release.xcconfig"; path = "Target Support Files/Pods-PostBarUITests/Pods-PostBarUITests.release.xcconfig"; sourceTree = "<group>"; };
 		47DAA3339EE967249454D188 /* Pods-PostBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostBar.debug.xcconfig"; path = "Target Support Files/Pods-PostBar/Pods-PostBar.debug.xcconfig"; sourceTree = "<group>"; };
 		54D494269FA4759B3CC631E4 /* libPods-PostBarTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PostBarTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,8 +162,6 @@
 				1506FD4A22A650FD00FD4255 /* AppDelegate.m */,
 				1506FD4C22A650FD00FD4255 /* ViewController.h */,
 				1506FD4D22A650FD00FD4255 /* ViewController.m */,
-				1506FD9722A6577000FD4255 /* PBNavigationController.h */,
-				1506FD9822A6577000FD4255 /* PBNavigationController.m */,
 				1506FD4F22A650FD00FD4255 /* Main.storyboard */,
 				1506FD5222A650FE00FD4255 /* Assets.xcassets */,
 				1506FD5422A650FE00FD4255 /* LaunchScreen.storyboard */,
@@ -188,6 +192,8 @@
 		1506FD7B22A6531700FD4255 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1512B97C22A794780025C36A /* Catogary */,
+				1512B96F22A78AA20025C36A /* BaseClass */,
 				1506FD9622A6566E00FD4255 /* Moudel */,
 			);
 			path = Classes;
@@ -304,8 +310,36 @@
 			children = (
 				1506FDA422A6603500FD4255 /* PBPostListCell.h */,
 				1506FDA522A6603500FD4255 /* PBPostListCell.m */,
+				1512B97D22A79B190025C36A /* PBPostGridView.h */,
+				1512B97E22A79B190025C36A /* PBPostGridView.m */,
+				1512B98322A79EC50025C36A /* PBCollectionViewCell.h */,
+				1512B98422A79EC50025C36A /* PBCollectionViewCell.m */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		1512B96F22A78AA20025C36A /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				1512B97022A78AB60025C36A /* Navigation */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		1512B97022A78AB60025C36A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				1506FD9722A6577000FD4255 /* PBNavigationController.h */,
+				1506FD9822A6577000FD4255 /* PBNavigationController.m */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		1512B97C22A794780025C36A /* Catogary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Catogary;
 			sourceTree = "<group>";
 		};
 		25EC8D39EBAD0394B553C3D8 /* Pods */ = {
@@ -557,6 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1506FD8B22A653F200FD4255 /* PBReleasePostInfoVC.m in Sources */,
+				1512B97F22A79B190025C36A /* PBPostGridView.m in Sources */,
 				1506FD8E22A6546300FD4255 /* PBCommentPostVC.m in Sources */,
 				1506FD9F22A658CA00FD4255 /* PBRegisterVC.m in Sources */,
 				1506FDA622A6603500FD4255 /* PBPostListCell.m in Sources */,
@@ -565,6 +600,7 @@
 				1506FD4E22A650FD00FD4255 /* ViewController.m in Sources */,
 				1506FD5922A650FE00FD4255 /* main.m in Sources */,
 				1506FD9C22A658BF00FD4255 /* PBLoginVC.m in Sources */,
+				1512B98522A79EC50025C36A /* PBCollectionViewCell.m in Sources */,
 				1506FDA922A660B500FD4255 /* PBPostListModel.m in Sources */,
 				1506FDA222A658ED00FD4255 /* PBForgetPasswordVC.m in Sources */,
 				1506FD8822A653A800FD4255 /* PBBasePostListVC.m in Sources */,

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C666474F4B3F43F36C69A8DE2347BCCD"
+               BlueprintIdentifier = "9FE0084743A247BAE30EC4D84F9D9BA2"
                BuildableName = "libPods-PostBar.a"
                BlueprintName = "Pods-PostBar"
                ReferencedContainer = "container:Pods.xcodeproj">

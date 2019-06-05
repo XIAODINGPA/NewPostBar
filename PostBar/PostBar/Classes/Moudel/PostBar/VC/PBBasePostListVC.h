@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PBBasePostListVC : UITableViewController
+@property (nonatomic, copy) NSString *classId;
 
 @end
 

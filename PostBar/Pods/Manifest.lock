@@ -15,24 +15,26 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Masonry (1.1.0)
+  - MJExtension (3.0.17)
   - PPNetworkHelper (0.8.1):
     - AFNetworking (~> 3.2.0)
     - YYCache (~> 1.0.4)
   - RTRootNavigationController (0.7.1):
     - RTRootNavigationController/Core (= 0.7.1)
   - RTRootNavigationController/Core (0.7.1)
-  - SDWebImage (5.0.5):
-    - SDWebImage/Core (= 5.0.5)
-  - SDWebImage/Core (5.0.5)
+  - SDWebImage (4.4.6):
+    - SDWebImage/Core (= 4.4.6)
+  - SDWebImage/Core (4.4.6)
   - TZImagePickerController (3.2.1)
   - WMPageController (2.5.2)
   - YYCache (1.0.4)
 
 DEPENDENCIES:
   - Masonry
+  - MJExtension
   - PPNetworkHelper
   - RTRootNavigationController
-  - SDWebImage
+  - SDWebImage (= 4.4.6)
   - TZImagePickerController
   - WMPageController
 
@@ -40,6 +42,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - Masonry
+    - MJExtension
     - PPNetworkHelper
     - RTRootNavigationController
     - SDWebImage
@@ -50,13 +53,14 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   PPNetworkHelper: e893191a73665e9c496c2887fd5ceece9e930bb8
   RTRootNavigationController: afa6913402be26f8326f7f37fc1550aa67baddcc
-  SDWebImage: f86b0a0713195d1c734335d010697d44af10d165
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   TZImagePickerController: bf4c57b98d8707fce41ea6be872414a71c7a8c9d
   WMPageController: 0c7624d2b48e4f1ab92371688cf6744ed701575d
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: aae16cf4bedd8a0903dbc26934b309bb373c11f5
+PODFILE CHECKSUM: 36bb7e4e8c97d7e2581280ef624a4fa8b88c8e2a
 
 COCOAPODS: 1.6.1
