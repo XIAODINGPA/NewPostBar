@@ -18,7 +18,7 @@
     [super viewDidLoad];
     [[UINavigationBar appearance] setTintColor:[UIColor orangeColor]];
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearance] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     // Do any additional setup after loading the view.
 }
 

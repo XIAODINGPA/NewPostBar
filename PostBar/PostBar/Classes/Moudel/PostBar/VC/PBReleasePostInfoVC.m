@@ -25,6 +25,11 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"发帖";
+    UIWebView *webView = [[UIWebView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    webView.backgroundColor = UIColor.whiteColor;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"PostBar_PreProduct.html" ofType:nil];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]]];
+    [self.view addSubview:webView];
     
     // Do any additional setup after loading the view.
 }

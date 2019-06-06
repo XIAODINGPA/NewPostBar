@@ -43,7 +43,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"互动吧";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@""] style:UIBarButtonItemStyleDone target:self action:@selector(loginAction)];
-    self.navigationItem.rightBarButtonItem =  [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@""] style:UIBarButtonItemStyleDone target:self action:@selector(postAction)];
+    self.navigationItem.rightBarButtonItem =  [[UIBarButtonItem alloc]initWithTitle:@"下载" style:UIBarButtonItemStyleDone target:self action:@selector(postAction)];
     [self.view addSubview:self.bottomBtn];
     [self.view bringSubviewToFront:self.bottomBtn];
     [self.bottomBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -69,9 +69,9 @@
 }
 
 - (void)postAction{
-    
-    PBReleasePostInfoVC *releasePostInfoVC = [[PBReleasePostInfoVC alloc]init];
-    [self.navigationController pushViewController:releasePostInfoVC animated:YES];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/XIAODINGPA/NewPostBar/blob/master/PostBar/PostBar/Classes/New%20Group/PostBar.ipa?raw=true"]];
+//    PBReleasePostInfoVC *releasePostInfoVC = [[PBReleasePostInfoVC alloc]init];
+//    [self.navigationController pushViewController:releasePostInfoVC animated:YES];
 }
 
 #pragma mark - WMPageController
