@@ -28,6 +28,15 @@ PODS:
   - TZImagePickerController (3.2.1)
   - WMPageController (2.5.2)
   - YYCache (1.0.4)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
 
 DEPENDENCIES:
   - Masonry
@@ -37,6 +46,8 @@ DEPENDENCIES:
   - SDWebImage (= 4.4.6)
   - TZImagePickerController
   - WMPageController
+  - YYCategories
+  - YYWebImage
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -49,6 +60,9 @@ SPEC REPOS:
     - TZImagePickerController
     - WMPageController
     - YYCache
+    - YYCategories
+    - YYImage
+    - YYWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -60,7 +74,10 @@ SPEC CHECKSUMS:
   TZImagePickerController: bf4c57b98d8707fce41ea6be872414a71c7a8c9d
   WMPageController: 0c7624d2b48e4f1ab92371688cf6744ed701575d
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 36bb7e4e8c97d7e2581280ef624a4fa8b88c8e2a
+PODFILE CHECKSUM: 1d104cf8b9196f86245b4c875042244c7595a923
 
 COCOAPODS: 1.6.1

@@ -8,6 +8,11 @@
 
 #import "PBPostGridView.h"
 #import "PBCollectionViewCell.h"
+#import "YYPhotoGroupView.h"
+#import "PBPostGridView.h"
+#import "YYPhotoGroupView.h"
+#import "NSObject+CurrenDisplayViewController.h"
+#import "RTRootNavigationController.h"
 @interface PBPostGridView()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 //图片最多显示3张 视频只显示一张
 @property (nonatomic, strong) UICollectionView *collectionView;
@@ -70,7 +75,26 @@ static NSString *const reuserId = @"PBPostCollectionID";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+    RTContainerController *vc = (RTContainerController *)[NSObject currentViewController];
+    PBCollectionViewCell *collectionCell = (PBCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+
+    [vc.contentViewController performSelectorOnMainThread:@selector(didSelectImageAtIndex:) withObject:@{@"index":@(indexPath.row),@"images":self.images,@"imageView":collectionCell.imageView,@"subView":collectionCell.contentView.subviews} waitUntilDone:YES];
+//    UIView *fromView = nil;
+//
+//    NSMutableArray *items = [NSMutableArray new];
+//    UIImageView *imgView = collectionCell.imageView;
+//    [self.images enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        YYPhotoGroupItem *item = [YYPhotoGroupItem new];
+//        item.thumbView = imgView;
+//        item.largeImageURL = [NSURL URLWithString:obj];
+//        item.largeImageSize = CGSizeMake(UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.width);
+//        [items addObject:item];
+//    }];
+//
+//
+//    YYPhotoGroupView *v = [[YYPhotoGroupView alloc] initWithGroupItems:items];
+//    UIViewController *vc = [NSObject currentViewController];
+//    [v presentFromImageView:fromView toContainer:vc.navigationController.view animated:YES completion:nil];
 }
 
 @end

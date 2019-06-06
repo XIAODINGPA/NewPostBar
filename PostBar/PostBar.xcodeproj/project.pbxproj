@@ -30,6 +30,12 @@
 		1512B97F22A79B190025C36A /* PBPostGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B97E22A79B190025C36A /* PBPostGridView.m */; };
 		1512B98522A79EC50025C36A /* PBCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B98422A79EC50025C36A /* PBCollectionViewCell.m */; };
 		1512B98C22A8E33B0025C36A /* PostBar_PreProduct.html in Resources */ = {isa = PBXBuildFile; fileRef = 1512B98B22A8E33B0025C36A /* PostBar_PreProduct.html */; };
+		1512B99722A8FBF90025C36A /* NSString+timeStampDateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B99422A8FBF90025C36A /* NSString+timeStampDateFormat.m */; };
+		1512B99822A8FBF90025C36A /* NSString+StringSizeFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B99522A8FBF90025C36A /* NSString+StringSizeFont.m */; };
+		1512B99B22A8FC2A0025C36A /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B99922A8FC2A0025C36A /* NSDate+Utils.m */; };
+		1512B99F22A905680025C36A /* YYPhotoGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B99E22A905680025C36A /* YYPhotoGroupView.m */; };
+		1512B9A422A90AB10025C36A /* NSObject+CurrenDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B9A022A90AB10025C36A /* NSObject+CurrenDisplayViewController.m */; };
+		1512B9A522A90AB10025C36A /* UIView+ParentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B9A322A90AB10025C36A /* UIView+ParentController.m */; };
 		874BF1A4523E08D5B379D2DA /* libPods-PostBarTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D494269FA4759B3CC631E4 /* libPods-PostBarTests.a */; };
 		8E5927DA3C3E7C89C02B2FD4 /* libPods-PostBarUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73286A9005AC74606C2207F4 /* libPods-PostBarUITests.a */; };
 /* End PBXBuildFile section */
@@ -95,6 +101,18 @@
 		1512B98322A79EC50025C36A /* PBCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBCollectionViewCell.h; sourceTree = "<group>"; };
 		1512B98422A79EC50025C36A /* PBCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBCollectionViewCell.m; sourceTree = "<group>"; };
 		1512B98B22A8E33B0025C36A /* PostBar_PreProduct.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PostBar_PreProduct.html; sourceTree = "<group>"; };
+		1512B99322A8FBF90025C36A /* NSString+timeStampDateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+timeStampDateFormat.h"; sourceTree = "<group>"; };
+		1512B99422A8FBF90025C36A /* NSString+timeStampDateFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+timeStampDateFormat.m"; sourceTree = "<group>"; };
+		1512B99522A8FBF90025C36A /* NSString+StringSizeFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringSizeFont.m"; sourceTree = "<group>"; };
+		1512B99622A8FBF90025C36A /* NSString+StringSizeFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringSizeFont.h"; sourceTree = "<group>"; };
+		1512B99922A8FC2A0025C36A /* NSDate+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utils.m"; sourceTree = "<group>"; };
+		1512B99A22A8FC2A0025C36A /* NSDate+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utils.h"; sourceTree = "<group>"; };
+		1512B99D22A905680025C36A /* YYPhotoGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYPhotoGroupView.h; sourceTree = "<group>"; };
+		1512B99E22A905680025C36A /* YYPhotoGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYPhotoGroupView.m; sourceTree = "<group>"; };
+		1512B9A022A90AB10025C36A /* NSObject+CurrenDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CurrenDisplayViewController.m"; sourceTree = "<group>"; };
+		1512B9A122A90AB10025C36A /* NSObject+CurrenDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CurrenDisplayViewController.h"; sourceTree = "<group>"; };
+		1512B9A222A90AB10025C36A /* UIView+ParentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ParentController.h"; sourceTree = "<group>"; };
+		1512B9A322A90AB10025C36A /* UIView+ParentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ParentController.m"; sourceTree = "<group>"; };
 		2EBA2394692D0DDB31391EA4 /* Pods-PostBarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostBarUITests.release.xcconfig"; path = "Target Support Files/Pods-PostBarUITests/Pods-PostBarUITests.release.xcconfig"; sourceTree = "<group>"; };
 		47DAA3339EE967249454D188 /* Pods-PostBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostBar.debug.xcconfig"; path = "Target Support Files/Pods-PostBar/Pods-PostBar.debug.xcconfig"; sourceTree = "<group>"; };
 		54D494269FA4759B3CC631E4 /* libPods-PostBarTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PostBarTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -311,6 +329,7 @@
 		1506FDA322A6601900FD4255 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				1512B99C22A905680025C36A /* YYPhotoGroupView */,
 				1506FDA422A6603500FD4255 /* PBPostListCell.h */,
 				1506FDA522A6603500FD4255 /* PBPostListCell.m */,
 				1512B97D22A79B190025C36A /* PBPostGridView.h */,
@@ -341,6 +360,16 @@
 		1512B97C22A794780025C36A /* Catogary */ = {
 			isa = PBXGroup;
 			children = (
+				1512B99622A8FBF90025C36A /* NSString+StringSizeFont.h */,
+				1512B99522A8FBF90025C36A /* NSString+StringSizeFont.m */,
+				1512B99322A8FBF90025C36A /* NSString+timeStampDateFormat.h */,
+				1512B99422A8FBF90025C36A /* NSString+timeStampDateFormat.m */,
+				1512B99A22A8FC2A0025C36A /* NSDate+Utils.h */,
+				1512B99922A8FC2A0025C36A /* NSDate+Utils.m */,
+				1512B9A122A90AB10025C36A /* NSObject+CurrenDisplayViewController.h */,
+				1512B9A022A90AB10025C36A /* NSObject+CurrenDisplayViewController.m */,
+				1512B9A222A90AB10025C36A /* UIView+ParentController.h */,
+				1512B9A322A90AB10025C36A /* UIView+ParentController.m */,
 			);
 			path = Catogary;
 			sourceTree = "<group>";
@@ -351,6 +380,15 @@
 				1512B98B22A8E33B0025C36A /* PostBar_PreProduct.html */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		1512B99C22A905680025C36A /* YYPhotoGroupView */ = {
+			isa = PBXGroup;
+			children = (
+				1512B99D22A905680025C36A /* YYPhotoGroupView.h */,
+				1512B99E22A905680025C36A /* YYPhotoGroupView.m */,
+			);
+			path = YYPhotoGroupView;
 			sourceTree = "<group>";
 		};
 		25EC8D39EBAD0394B553C3D8 /* Pods */ = {
@@ -606,7 +644,10 @@
 				1512B97F22A79B190025C36A /* PBPostGridView.m in Sources */,
 				1506FD8E22A6546300FD4255 /* PBCommentPostVC.m in Sources */,
 				1506FD9F22A658CA00FD4255 /* PBRegisterVC.m in Sources */,
+				1512B99822A8FBF90025C36A /* NSString+StringSizeFont.m in Sources */,
+				1512B99F22A905680025C36A /* YYPhotoGroupView.m in Sources */,
 				1506FDA622A6603500FD4255 /* PBPostListCell.m in Sources */,
+				1512B99B22A8FC2A0025C36A /* NSDate+Utils.m in Sources */,
 				1506FD9922A6577000FD4255 /* PBNavigationController.m in Sources */,
 				1506FD9122A6548F00FD4255 /* PBSearchPostVC.m in Sources */,
 				1506FD4E22A650FD00FD4255 /* ViewController.m in Sources */,
@@ -614,9 +655,12 @@
 				1506FD9C22A658BF00FD4255 /* PBLoginVC.m in Sources */,
 				1512B98522A79EC50025C36A /* PBCollectionViewCell.m in Sources */,
 				1506FDA922A660B500FD4255 /* PBPostListModel.m in Sources */,
+				1512B9A422A90AB10025C36A /* NSObject+CurrenDisplayViewController.m in Sources */,
 				1506FDA222A658ED00FD4255 /* PBForgetPasswordVC.m in Sources */,
 				1506FD8822A653A800FD4255 /* PBBasePostListVC.m in Sources */,
 				1506FD4B22A650FD00FD4255 /* AppDelegate.m in Sources */,
+				1512B99722A8FBF90025C36A /* NSString+timeStampDateFormat.m in Sources */,
+				1512B9A522A90AB10025C36A /* UIView+ParentController.m in Sources */,
 				1506FD8522A6539200FD4255 /* PBHomePostVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

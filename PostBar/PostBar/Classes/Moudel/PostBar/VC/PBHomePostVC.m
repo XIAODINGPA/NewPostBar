@@ -11,6 +11,8 @@
 #import "PBReleasePostInfoVC.h"
 #import "PBBasePostListVC.h"
 #import "Masonry.h"
+#import "YYPhotoGroupView.h"
+
 @interface PBHomePostVC ()
 
 /**
@@ -39,11 +41,32 @@
 
 }
 
+- (void)didSelectImageAtIndex:(NSDictionary *)object{
+    NSLog(@"object ==> %@",object);
+        UIView *fromView = nil;
+    
+        NSMutableArray *items = [NSMutableArray new];
+        UIImageView *imgView = object[@"imageView"];
+        fromView = imgView;
+        [object[@"subView"] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            UIImageView *imageView = (UIImageView *)obj;
+            YYPhotoGroupItem *item = [YYPhotoGroupItem new];
+            item.thumbView = imageView;
+//            item.largeImageURL = [NSURL URLWithString:imageView];
+            item.largeImageSize = CGSizeMake(UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.width);
+            [items addObject:item];
+        }];
+    
+    
+        YYPhotoGroupView *v = [[YYPhotoGroupView alloc] initWithGroupItems:items];
+        [v presentFromImageView:fromView toContainer:self.navigationController.view animated:YES completion:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"互动吧";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@""] style:UIBarButtonItemStyleDone target:self action:@selector(loginAction)];
-    self.navigationItem.rightBarButtonItem =  [[UIBarButtonItem alloc]initWithTitle:@"下载" style:UIBarButtonItemStyleDone target:self action:@selector(postAction)];
+    self.navigationItem.rightBarButtonItem =  [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStyleDone target:self action:@selector(postAction)];
     [self.view addSubview:self.bottomBtn];
     [self.view bringSubviewToFront:self.bottomBtn];
     [self.bottomBtn mas_makeConstraints:^(MASConstraintMaker *make) {

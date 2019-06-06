@@ -11,6 +11,8 @@
 #import "PPNetworkHelper.h"
 #import "MJExtension.h"
 #import "PBPostListModel.h"
+#import "NSString+StringSizeFont.h"
+
 @interface PBBasePostListVC ()
 @property (nonatomic, strong) NSMutableArray *postDataSource;
 @property (nonatomic, assign) NSUInteger pageIndex;
@@ -25,6 +27,8 @@
     [self loadPostListData:YES];
     // Do any additional setup after loading the view.
 }
+
+
 
 #pragma mark - Service 
 - (void)loadPostListData:(BOOL)refresh{
@@ -48,7 +52,8 @@
                        CGFloat cellHeight = 0.0;
                        if(bodyStr.length > 0){
                            bodyStr = [bodyStr stringByReplacingOccurrencesOfString:@" " withString:@""];
-                           bodyHeight = [bodyStr boundingRectWithSize:CGSizeMake(UIScreen.mainScreen.bounds.size.width - 20, MAXFLOAT) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15]} context:nil].size.height + 1;
+                           bodyHeight = [bodyStr stringSizeWithFont:[UIFont systemFontOfSize:15] Size:CGSizeMake(UIScreen.mainScreen.bounds.size.width - 20, MAXFLOAT)].height;
+                           //[bodyStr boundingRectWithSize:CGSizeMake(UIScreen.mainScreen.bounds.size.width - 20, MAXFLOAT) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15]} context:nil].size.height + 1;
                        }
                        CGFloat itemWidth = ([UIScreen mainScreen].bounds.size.width - 20 - 10)/3;
                        if(obj.images.count > 0){
@@ -73,7 +78,7 @@
                                    break;
                            }
                        }
-                       cellHeight = bodyHeight  + gridHeight + 44 + 12 + 8 + 16 + 5 + 5 + 44;
+                       cellHeight = bodyHeight  + gridHeight + 44 + 12 + 8 + 16 + 5 + 5 + 44 ;
                        obj.gridHeight = gridHeight;
                        obj.bodyHeight = bodyHeight;
                        obj.cellHeight = cellHeight;
@@ -111,9 +116,11 @@ static NSString *const reuseIdentifier = @"PBBasePostListCellReuseId";
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//   
+//    
+//    
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if(self.postDataSource.count > 0){

@@ -11,6 +11,7 @@
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
 #import "PBPostGridView.h"
+#import "NSString+timeStampDateFormat.h"
 @interface PBPostListCell()
 
 /**
@@ -38,10 +39,6 @@
  */
 @property (nonatomic, strong) UILabel *releaseDateLabel;
 
-/**
- 图片最大显示3张 视频只显示一个 发布的时候只能发布一个视频
- */
-@property (nonatomic, strong) PBPostGridView *gridView;
 
 /**
  评论按钮 需要显示评论数
@@ -76,7 +73,7 @@
 - (void)addChildView{
     [self.contentView addSubview:self.headerImageView];
     [self.contentView addSubview:self.userNameLabel];
-    [self.contentView addSubview:self.postTitleLabel];
+//    [self.contentView addSubview:self.postTitleLabel];
     [self.contentView addSubview:self.postContentLabel];
     [self.contentView addSubview:self.gridView];
     [self.contentView addSubview:self.releaseDateLabel];
@@ -103,16 +100,16 @@
         make.left.equalTo(self.headerImageView.mas_right).offset(8);
     }];
 
-    [self.postTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView).offset(10);
-        make.right.equalTo(self.contentView.mas_right).offset(-10);
-        make.top.equalTo(self.headerImageView.mas_bottom).offset(8);
-    }];
+//    [self.postTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self.contentView).offset(10);
+//        make.right.equalTo(self.contentView.mas_right).offset(-10);
+//        make.top.equalTo(self.headerImageView.mas_bottom).offset(8);
+//    }];
 
     [self.postContentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentView).offset(10);
         make.right.equalTo(self.contentView.mas_right).offset(-10);
-        make.top.equalTo(self.postTitleLabel.mas_bottom).offset(5);
+        make.top.equalTo(self.self.headerImageView.mas_bottom).offset(10);
     }];
 
 //    CGFloat gridWidth = (UIScreen.mainScreen.bounds.size.width - 4 * 10)/3;
@@ -161,15 +158,19 @@
     
     _userNameLabel.text = listModel.memberName;
     
-    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[listModel.createTime longLongValue]];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    [formatter setDateFormat:@"YYYY-MM-dd"];
-    NSString *dateStr = [formatter stringFromDate:date];
-    _releaseDateLabel.text = [NSString stringWithFormat:@"发布于%@",dateStr];
+//    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[listModel.createTime longLongValue]];
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+//    [formatter setDateFormat:@"MM-dd"];
+//    NSString *dateStr = [formatter stringFromDate:date];
+  
+    _releaseDateLabel.text = [NSString stringWithFormat:@"发布于%@",[listModel.createTime timeStapDateFormat:@"yyyy-MM-dd"]];
     
     [_commentBtn setTitle:[NSString stringWithFormat:@"评论 %@",listModel.replyCount] forState:UIControlStateNormal];
-    _postTitleLabel.text = listModel.title;
-    _postContentLabel.text = listModel.body;
+//    _postTitleLabel.text = listModel.title;
+    NSString * str = [NSString stringWithFormat:@"#%@#%@",listModel.title,listModel.body];
+    NSMutableAttributedString * attributedString = [[NSMutableAttributedString alloc]initWithString:str];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:127.f/255 green:184.f/255 blue:255.f/255 alpha:1] range:NSMakeRange(0, listModel.title.length + 2)];
+    _postContentLabel.attributedText = attributedString;
     
     CGFloat gridHeight = listModel.gridHeight;
     [_gridView mas_makeConstraints:^(MASConstraintMaker *make) {

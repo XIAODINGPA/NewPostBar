@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PBCollectionViewCell : UICollectionViewCell
+@property (nonatomic, strong,readonly) UIImageView *imageView;
+
 @property (nonatomic, strong) NSString * url;
 @end
 
