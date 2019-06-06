@@ -20,7 +20,7 @@
 					<string>display-image</string>
 					<key>url</key>
 
-					<string>https://github.com/XIAODINGPA/NewPostBar/blob/master/PostBar/PostBar/Classes/Resource/icon_512@2x.png?raw=true</string>
+					<string>https://github.com/XIAODINGPA/NewPostBar/raw/master/PostBar/PostBar/Classes/Resource/icon_512@2x.png</string>
 			
 				</dict>
 				<dict>
@@ -28,7 +28,7 @@
 					<string>full-size-image</string>
 					<key>url</key>
 
-					<string>https://github.com/XIAODINGPA/NewPostBar/blob/master/PostBar/PostBar/Classes/Resource/icon_57@2x.png?raw=true</string>
+					<string>https://github.com/XIAODINGPA/NewPostBar/raw/master/PostBar/PostBar/Classes/Resource/icon_57@2x.png</string>
 
 				</dict>
 			</array>
