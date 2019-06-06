@@ -46,6 +46,7 @@ static NSString *const reuserId = @"PBPostCollectionID";
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
         layout.minimumLineSpacing = 5;
         layout.minimumInteritemSpacing = 5;
+        
         CGFloat itemWidth = (self.bounds.size.width - 10)/3;
         layout.itemSize = CGSizeMake(itemWidth, itemWidth);
         // l

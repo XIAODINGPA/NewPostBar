@@ -9,7 +9,6 @@
 #import "PBCollectionViewCell.h"
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
-
 @interface PBCollectionViewCell()
 @property (nonatomic, strong,readwrite) UIImageView *imageView;
 @end

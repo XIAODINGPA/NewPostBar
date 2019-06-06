@@ -112,14 +112,14 @@
         make.top.equalTo(self.self.headerImageView.mas_bottom).offset(10);
     }];
 
-//    CGFloat gridWidth = (UIScreen.mainScreen.bounds.size.width - 4 * 10)/3;
-//    [self.gridView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.contentView).offset(10);
-//        make.right.equalTo(self.contentView.mas_right).offset(-10);
-//        make.top.equalTo(self.postContentLabel.mas_bottom).offset(5);
-//        make.height.mas_equalTo(gridWidth);
-//
-//    }];
+    CGFloat gridWidth = (UIScreen.mainScreen.bounds.size.width - 4 * 10)/3;
+    [self.gridView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.contentView).offset(10);
+        make.right.equalTo(self.contentView.mas_right).offset(-10);
+        make.top.equalTo(self.postContentLabel.mas_bottom).offset(5);
+        make.height.mas_equalTo(gridWidth);
+
+    }];
 
   
 
