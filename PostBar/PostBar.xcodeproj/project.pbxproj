@@ -194,7 +194,7 @@
 		1506FD7B22A6531700FD4255 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1512B98A22A8DC650025C36A /* 企业分发资源 */,
+				1512B98A22A8DC650025C36A /* Resource */,
 				1512B97C22A794780025C36A /* Catogary */,
 				1512B96F22A78AA20025C36A /* BaseClass */,
 				1506FD9622A6566E00FD4255 /* Moudel */,
@@ -345,12 +345,12 @@
 			path = Catogary;
 			sourceTree = "<group>";
 		};
-		1512B98A22A8DC650025C36A /* 企业分发资源 */ = {
+		1512B98A22A8DC650025C36A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				1512B98B22A8E33B0025C36A /* PostBar_PreProduct.html */,
 			);
-			path = "企业分发资源";
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		25EC8D39EBAD0394B553C3D8 /* Pods */ = {
