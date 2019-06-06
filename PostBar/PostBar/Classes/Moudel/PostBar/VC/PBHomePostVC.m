@@ -69,9 +69,8 @@
 }
 
 - (void)postAction{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/XIAODINGPA/NewPostBar/blob/master/PostBar/PostBar/Classes/New%20Group/PostBar.ipa?raw=true"]];
-//    PBReleasePostInfoVC *releasePostInfoVC = [[PBReleasePostInfoVC alloc]init];
-//    [self.navigationController pushViewController:releasePostInfoVC animated:YES];
+    PBReleasePostInfoVC *releasePostInfoVC = [[PBReleasePostInfoVC alloc]init];
+    [self.navigationController pushViewController:releasePostInfoVC animated:YES];
 }
 
 #pragma mark - WMPageController
