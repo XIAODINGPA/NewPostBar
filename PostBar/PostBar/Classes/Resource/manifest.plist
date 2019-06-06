@@ -11,31 +11,25 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-<<<<<<< HEAD
+
 					<string>https://github.com/XIAODINGPA/NewPostBar/blob/master/PostBar/PostBar/Classes/Resource/PostBar.ipa?raw=true</string>
-=======
-					<string>https://github.com/XIAODINGPA/NewPostBar/blob/master/PostBar/PostBar/Classes/Resource/PostBar.ipa</string>
->>>>>>> 738650d75de102f0328818aa36e822ddeb683668
+
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>display-image</string>
 					<key>url</key>
-<<<<<<< HEAD
+
 					<string>https://github.com/XIAODINGPA/NewPostBar/blob/master/PostBar/PostBar/Classes/Resource/icon_512@2x.png?raw=true</string>
-=======
-					<string>https://github.com/XIAODINGPA/NewPostBar/blob/master/PostBar/PostBar/Classes/Resource/icon_57@2x.png?raw=true</string>
->>>>>>> 738650d75de102f0328818aa36e822ddeb683668
+			
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>full-size-image</string>
 					<key>url</key>
-<<<<<<< HEAD
+
 					<string>https://github.com/XIAODINGPA/NewPostBar/blob/master/PostBar/PostBar/Classes/Resource/icon_57@2x.png?raw=true</string>
-=======
-					<string>https://github.com/XIAODINGPA/NewPostBar/blob/master/PostBar/PostBar/Classes/Resource/icon_512@2x.png?raw=true</string>
->>>>>>> 738650d75de102f0328818aa36e822ddeb683668
+
 				</dict>
 			</array>
 			<key>metadata</key>
