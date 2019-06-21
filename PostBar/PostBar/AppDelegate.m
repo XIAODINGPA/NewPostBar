@@ -21,6 +21,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[PBNavigationController alloc]initWithRootViewController:[PBHomePostVC new]];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

@@ -27,8 +27,6 @@
 		1506FDA222A658ED00FD4255 /* PBForgetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1506FDA122A658ED00FD4255 /* PBForgetPasswordVC.m */; };
 		1506FDA622A6603500FD4255 /* PBPostListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1506FDA522A6603500FD4255 /* PBPostListCell.m */; };
 		1506FDA922A660B500FD4255 /* PBPostListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1506FDA822A660B500FD4255 /* PBPostListModel.m */; };
-		1512B97F22A79B190025C36A /* PBPostGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B97E22A79B190025C36A /* PBPostGridView.m */; };
-		1512B98522A79EC50025C36A /* PBCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B98422A79EC50025C36A /* PBCollectionViewCell.m */; };
 		1512B98C22A8E33B0025C36A /* PostBar_PreProduct.html in Resources */ = {isa = PBXBuildFile; fileRef = 1512B98B22A8E33B0025C36A /* PostBar_PreProduct.html */; };
 		1512B99722A8FBF90025C36A /* NSString+timeStampDateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B99422A8FBF90025C36A /* NSString+timeStampDateFormat.m */; };
 		1512B99822A8FBF90025C36A /* NSString+StringSizeFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B99522A8FBF90025C36A /* NSString+StringSizeFont.m */; };
@@ -36,6 +34,7 @@
 		1512B99F22A905680025C36A /* YYPhotoGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B99E22A905680025C36A /* YYPhotoGroupView.m */; };
 		1512B9A422A90AB10025C36A /* NSObject+CurrenDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B9A022A90AB10025C36A /* NSObject+CurrenDisplayViewController.m */; };
 		1512B9A522A90AB10025C36A /* UIView+ParentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1512B9A322A90AB10025C36A /* UIView+ParentController.m */; };
+		15F4D0BA22BCA6F30021A4C8 /* PBPostNewGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F4D0B922BCA6F30021A4C8 /* PBPostNewGridView.m */; };
 		874BF1A4523E08D5B379D2DA /* libPods-PostBarTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D494269FA4759B3CC631E4 /* libPods-PostBarTests.a */; };
 		8E5927DA3C3E7C89C02B2FD4 /* libPods-PostBarUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73286A9005AC74606C2207F4 /* libPods-PostBarUITests.a */; };
 /* End PBXBuildFile section */
@@ -96,10 +95,6 @@
 		1506FDA522A6603500FD4255 /* PBPostListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBPostListCell.m; sourceTree = "<group>"; };
 		1506FDA722A660B500FD4255 /* PBPostListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBPostListModel.h; sourceTree = "<group>"; };
 		1506FDA822A660B500FD4255 /* PBPostListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBPostListModel.m; sourceTree = "<group>"; };
-		1512B97D22A79B190025C36A /* PBPostGridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBPostGridView.h; sourceTree = "<group>"; };
-		1512B97E22A79B190025C36A /* PBPostGridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBPostGridView.m; sourceTree = "<group>"; };
-		1512B98322A79EC50025C36A /* PBCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBCollectionViewCell.h; sourceTree = "<group>"; };
-		1512B98422A79EC50025C36A /* PBCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBCollectionViewCell.m; sourceTree = "<group>"; };
 		1512B98B22A8E33B0025C36A /* PostBar_PreProduct.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PostBar_PreProduct.html; sourceTree = "<group>"; };
 		1512B99322A8FBF90025C36A /* NSString+timeStampDateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+timeStampDateFormat.h"; sourceTree = "<group>"; };
 		1512B99422A8FBF90025C36A /* NSString+timeStampDateFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+timeStampDateFormat.m"; sourceTree = "<group>"; };
@@ -113,6 +108,8 @@
 		1512B9A122A90AB10025C36A /* NSObject+CurrenDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CurrenDisplayViewController.h"; sourceTree = "<group>"; };
 		1512B9A222A90AB10025C36A /* UIView+ParentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ParentController.h"; sourceTree = "<group>"; };
 		1512B9A322A90AB10025C36A /* UIView+ParentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ParentController.m"; sourceTree = "<group>"; };
+		15F4D0B822BCA6F30021A4C8 /* PBPostNewGridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBPostNewGridView.h; sourceTree = "<group>"; };
+		15F4D0B922BCA6F30021A4C8 /* PBPostNewGridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBPostNewGridView.m; sourceTree = "<group>"; };
 		2EBA2394692D0DDB31391EA4 /* Pods-PostBarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostBarUITests.release.xcconfig"; path = "Target Support Files/Pods-PostBarUITests/Pods-PostBarUITests.release.xcconfig"; sourceTree = "<group>"; };
 		47DAA3339EE967249454D188 /* Pods-PostBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostBar.debug.xcconfig"; path = "Target Support Files/Pods-PostBar/Pods-PostBar.debug.xcconfig"; sourceTree = "<group>"; };
 		54D494269FA4759B3CC631E4 /* libPods-PostBarTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PostBarTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -332,10 +329,8 @@
 				1512B99C22A905680025C36A /* YYPhotoGroupView */,
 				1506FDA422A6603500FD4255 /* PBPostListCell.h */,
 				1506FDA522A6603500FD4255 /* PBPostListCell.m */,
-				1512B97D22A79B190025C36A /* PBPostGridView.h */,
-				1512B97E22A79B190025C36A /* PBPostGridView.m */,
-				1512B98322A79EC50025C36A /* PBCollectionViewCell.h */,
-				1512B98422A79EC50025C36A /* PBCollectionViewCell.m */,
+				15F4D0B822BCA6F30021A4C8 /* PBPostNewGridView.h */,
+				15F4D0B922BCA6F30021A4C8 /* PBPostNewGridView.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -641,7 +636,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1506FD8B22A653F200FD4255 /* PBReleasePostInfoVC.m in Sources */,
-				1512B97F22A79B190025C36A /* PBPostGridView.m in Sources */,
 				1506FD8E22A6546300FD4255 /* PBCommentPostVC.m in Sources */,
 				1506FD9F22A658CA00FD4255 /* PBRegisterVC.m in Sources */,
 				1512B99822A8FBF90025C36A /* NSString+StringSizeFont.m in Sources */,
@@ -653,11 +647,11 @@
 				1506FD4E22A650FD00FD4255 /* ViewController.m in Sources */,
 				1506FD5922A650FE00FD4255 /* main.m in Sources */,
 				1506FD9C22A658BF00FD4255 /* PBLoginVC.m in Sources */,
-				1512B98522A79EC50025C36A /* PBCollectionViewCell.m in Sources */,
 				1506FDA922A660B500FD4255 /* PBPostListModel.m in Sources */,
 				1512B9A422A90AB10025C36A /* NSObject+CurrenDisplayViewController.m in Sources */,
 				1506FDA222A658ED00FD4255 /* PBForgetPasswordVC.m in Sources */,
 				1506FD8822A653A800FD4255 /* PBBasePostListVC.m in Sources */,
+				15F4D0BA22BCA6F30021A4C8 /* PBPostNewGridView.m in Sources */,
 				1506FD4B22A650FD00FD4255 /* AppDelegate.m in Sources */,
 				1512B99722A8FBF90025C36A /* NSString+timeStampDateFormat.m in Sources */,
 				1512B9A522A90AB10025C36A /* UIView+ParentController.m in Sources */,

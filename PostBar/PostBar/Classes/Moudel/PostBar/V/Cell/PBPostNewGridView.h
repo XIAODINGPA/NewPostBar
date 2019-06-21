@@ -1,8 +1,8 @@
 //
-//  PBPostListCell.h
+//  PBPostNewGridView.h
 //  PostBar
 //
-//  Created by cyf on 2019/6/4.
+//  Created by cyf on 2019/6/21.
 //  Copyright © 2019 cyf. All rights reserved.
 //
 
@@ -10,9 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PBPostListCell : UITableViewCell
+@interface PBPostNewGridView : UIView
+@property(nonatomic, copy) NSArray *images;
 
-- (void)configData:(id )data;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,11 +7,14 @@
 //
 
 #import "PBPostListCell.h"
+#import "PBPostNewGridView.h"
+
 #import "PBPostListModel.h"
+
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
-#import "PBPostGridView.h"
 #import "NSString+timeStampDateFormat.h"
+
 @interface PBPostListCell()
 
 /**
@@ -54,6 +57,10 @@
  分割线
  */
 @property (nonatomic, strong) UIView *sepLineView;
+/**
+ 图片布局
+ */
+@property (nonatomic, strong) PBPostNewGridView *gridContentView;
 
 
 @end
@@ -73,9 +80,8 @@
 - (void)addChildView{
     [self.contentView addSubview:self.headerImageView];
     [self.contentView addSubview:self.userNameLabel];
-//    [self.contentView addSubview:self.postTitleLabel];
     [self.contentView addSubview:self.postContentLabel];
-    [self.contentView addSubview:self.gridView];
+    [self.contentView addSubview:self.gridContentView];
     [self.contentView addSubview:self.releaseDateLabel];
     [self.contentView addSubview:self.commentBtn];
     [self.contentView addSubview:self.reportBtn];
@@ -100,28 +106,21 @@
         make.left.equalTo(self.headerImageView.mas_right).offset(8);
     }];
 
-//    [self.postTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.contentView).offset(10);
-//        make.right.equalTo(self.contentView.mas_right).offset(-10);
-//        make.top.equalTo(self.headerImageView.mas_bottom).offset(8);
-//    }];
-
     [self.postContentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentView).offset(10);
         make.right.equalTo(self.contentView.mas_right).offset(-10);
         make.top.equalTo(self.self.headerImageView.mas_bottom).offset(10);
     }];
-
-    CGFloat gridWidth = (UIScreen.mainScreen.bounds.size.width - 4 * 10)/3;
-    [self.gridView mas_makeConstraints:^(MASConstraintMaker *make) {
+    
+    //默认高度为0
+    [self.gridContentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentView).offset(10);
         make.right.equalTo(self.contentView.mas_right).offset(-10);
         make.top.equalTo(self.postContentLabel.mas_bottom).offset(5);
-        make.height.mas_equalTo(gridWidth);
+        make.height.mas_equalTo(0);
 
     }];
 
-  
 
     [self.commentBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.contentView.mas_bottom).offset(0);
@@ -158,22 +157,18 @@
     
     _userNameLabel.text = listModel.memberName;
     
-//    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[listModel.createTime longLongValue]];
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-//    [formatter setDateFormat:@"MM-dd"];
-//    NSString *dateStr = [formatter stringFromDate:date];
-  
     _releaseDateLabel.text = [NSString stringWithFormat:@"发布于%@",[listModel.createTime timeStapDateFormat:@"yyyy-MM-dd"]];
     
     [_commentBtn setTitle:[NSString stringWithFormat:@"评论 %@",listModel.replyCount] forState:UIControlStateNormal];
-//    _postTitleLabel.text = listModel.title;
+
     NSString * str = [NSString stringWithFormat:@"#%@#%@",listModel.title,listModel.body];
     NSMutableAttributedString * attributedString = [[NSMutableAttributedString alloc]initWithString:str];
-    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:127.f/255 green:184.f/255 blue:255.f/255 alpha:1] range:NSMakeRange(0, listModel.title.length + 2)];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor orangeColor] range:NSMakeRange(0, listModel.title.length + 2)];
     _postContentLabel.attributedText = attributedString;
-    
+    //更新高度
     CGFloat gridHeight = listModel.gridHeight;
-    [_gridView mas_makeConstraints:^(MASConstraintMaker *make) {
+    _gridContentView.images = listModel.images;
+    [_gridContentView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentView).offset(10);
         make.right.equalTo(self.contentView.mas_right).offset(-10);
         make.top.equalTo(self.postContentLabel.mas_bottom).offset(5);
@@ -181,12 +176,11 @@
     }];
 
 
-    [_gridView updateGridViewHeight:gridHeight];
-    [_gridView configData:listModel.images];
     
 
 }
 
+#pragma mark - 属性
 - (UIImageView *)headerImageView{
     if(_headerImageView == nil){
         _headerImageView = [[UIImageView alloc]init];
@@ -223,17 +217,17 @@
         _postContentLabel.text = @"这个菜真好";
         _postContentLabel.numberOfLines = 4;
         _postContentLabel.font = [UIFont systemFontOfSize:15];
-        _postContentLabel.textColor = [UIColor colorWithWhite:53.f/255 alpha:1];
+        _postContentLabel.textColor = [UIColor blackColor];
     }
     return _postContentLabel;
 }
 
-- (PBPostGridView *)gridView{
-    if(_gridView == nil){
-        _gridView = [[PBPostGridView alloc]initWithFrame:CGRectZero];
-        _gridView.backgroundColor = [UIColor colorWithWhite:242.f/255 alpha:1];
+- (PBPostNewGridView *)gridContentView{
+    if(_gridContentView == nil){
+        _gridContentView = [[PBPostNewGridView alloc]initWithFrame:CGRectZero];
+//        _gridContentView.backgroundColor = [UIColor colorWithWhite:242.f/255 alpha:1];
     }
-    return _gridView;
+    return _gridContentView;
 }
 
 - (UILabel *)releaseDateLabel{

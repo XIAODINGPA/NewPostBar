@@ -8,6 +8,7 @@
 
 #import "PBBasePostListVC.h"
 #import "PBPostListCell.h"
+#import "YYPhotoGroupView.h"
 #import "PPNetworkHelper.h"
 #import "MJExtension.h"
 #import "PBPostListModel.h"
@@ -26,9 +27,30 @@
     [self setUpTableView];
     [self loadPostListData:YES];
     // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didTapGridImage:) name:@"NotificationNameDidTapGridImage" object:nil];
 }
 
-
+- (void)didTapGridImage:(NSNotification *)notice{
+    NSDictionary * dic  = (NSDictionary *)notice.object;
+    NSString *url = dic[@"url"];
+    NSString *index = dic[@"index"];
+    NSDictionary *images = dic[@"images"];
+    UIImageView *imageView = dic[@"imageView"];
+    NSArray *imageViews = dic[@"imageViews"];
+    NSLog(@"url = %@ \n index = %@ \n images = %@",url,index,images);
+    NSMutableArray *items = [[NSMutableArray alloc]init];
+    int i = 0;
+    for (NSString *url in images) {
+        YYPhotoGroupItem *item = [[YYPhotoGroupItem alloc]init];
+        item.largeImageURL = [NSURL URLWithString:url];
+        item.thumbView = imageViews[i];
+        [items addObject:item];
+        i ++;
+    }
+    
+    YYPhotoGroupView *photoGroupView = [[YYPhotoGroupView alloc]initWithGroupItems:items.copy];
+    [photoGroupView presentFromImageView:imageView  toContainer:self.navigationController.view  animated:YES completion:nil];
+}
 
 #pragma mark - Service 
 - (void)loadPostListData:(BOOL)refresh{
@@ -93,20 +115,21 @@
 }
 
 static NSString *const reuseIdentifier = @"PBBasePostListCellReuseId";
-- (void)setUpTableView{
+- (void)setUpTableView
+{
     self.tableView.showsVerticalScrollIndicator = NO;
     [self.tableView registerClass:[PBPostListCell class] forCellReuseIdentifier:reuseIdentifier];
-//    self.tableView.estimatedRowHeight = 200;
-//    self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
 
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return self.postDataSource.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     PBPostListCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     if(self.postDataSource.count > 0){
         PBPostListModel *listModel = self.postDataSource[indexPath.row];
@@ -116,12 +139,6 @@ static NSString *const reuseIdentifier = @"PBBasePostListCellReuseId";
     return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//   
-//    
-//    
-//}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if(self.postDataSource.count > 0){
         PBPostListModel *listModel = self.postDataSource[indexPath.row];
@@ -130,8 +147,13 @@ static NSString *const reuseIdentifier = @"PBBasePostListCellReuseId";
     return  44;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    
+}
 
-
+#pragma mark - 属性
 - (NSMutableArray *)postDataSource{
     if(_postDataSource == nil){
         _postDataSource = [[NSMutableArray alloc]init];

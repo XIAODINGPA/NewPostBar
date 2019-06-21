@@ -80,26 +80,4 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
-/**
- bbstype = 0;
- body = "\U6652\U4e00\U4e0b\U6211\U7684\U82b1";
- bodyImageUrls = "http://mov.91catv.com/img/userfiles//images//bbs/topic//1559454458971.jpg,http://mov.91catv.com/img/userfiles//images//bbs/topic//1559454458980.jpg,http://mov.91catv.com/img/userfiles//images//bbs/topic//1559454458983.jpg";
- classId = 7;
- className = "\U56fe\U8bf4";
- createTime = 1559454372000;
- imageUrl = "http://mov.91catv.com/img/userfiles//images//bbs/topic//1559454458971.jpg,http://mov.91catv.com/img/userfiles//images//bbs/topic//1559454458980.jpg,http://mov.91catv.com/img/userfiles//images//bbs/topic//1559454458983.jpg";
- memberIcon = "http://mov.91catv.com/img/userfiles//images//member/image/null";
- memberId = 1437;
- memberName = "139****1214";
- replyCount = 0;
- replyDtos =                 (
- );
- shareUrl = "https://appymclient.91catv.com:8088//aladingshop-wap//bbs/bbsShare?topicId=39333";
- title = "\U9c9c\U82b1";
- topTime = "";
- topicId = 39333;
- updateTime = 1559461288000;
- videoUrl = "";
- },
- 
- **/
+
