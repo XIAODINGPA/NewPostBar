@@ -20,7 +20,6 @@
 		1506FD8822A653A800FD4255 /* PBBasePostListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1506FD8722A653A800FD4255 /* PBBasePostListVC.m */; };
 		1506FD8B22A653F200FD4255 /* PBReleasePostInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1506FD8A22A653F200FD4255 /* PBReleasePostInfoVC.m */; };
 		1506FD8E22A6546300FD4255 /* PBCommentPostVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1506FD8D22A6546300FD4255 /* PBCommentPostVC.m */; };
-		1506FD9122A6548F00FD4255 /* PBSearchPostVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1506FD9022A6548F00FD4255 /* PBSearchPostVC.m */; };
 		1506FD9922A6577000FD4255 /* PBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1506FD9822A6577000FD4255 /* PBNavigationController.m */; };
 		1506FD9C22A658BF00FD4255 /* PBLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1506FD9B22A658BF00FD4255 /* PBLoginVC.m */; };
 		1506FD9F22A658CA00FD4255 /* PBRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1506FD9E22A658CA00FD4255 /* PBRegisterVC.m */; };
@@ -81,8 +80,6 @@
 		1506FD8A22A653F200FD4255 /* PBReleasePostInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBReleasePostInfoVC.m; sourceTree = "<group>"; };
 		1506FD8C22A6546300FD4255 /* PBCommentPostVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBCommentPostVC.h; sourceTree = "<group>"; };
 		1506FD8D22A6546300FD4255 /* PBCommentPostVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBCommentPostVC.m; sourceTree = "<group>"; };
-		1506FD8F22A6548F00FD4255 /* PBSearchPostVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBSearchPostVC.h; sourceTree = "<group>"; };
-		1506FD9022A6548F00FD4255 /* PBSearchPostVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBSearchPostVC.m; sourceTree = "<group>"; };
 		1506FD9722A6577000FD4255 /* PBNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBNavigationController.h; sourceTree = "<group>"; };
 		1506FD9822A6577000FD4255 /* PBNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBNavigationController.m; sourceTree = "<group>"; };
 		1506FD9A22A658BF00FD4255 /* PBLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBLoginVC.h; sourceTree = "<group>"; };
@@ -250,8 +247,6 @@
 				1506FD8A22A653F200FD4255 /* PBReleasePostInfoVC.m */,
 				1506FD8C22A6546300FD4255 /* PBCommentPostVC.h */,
 				1506FD8D22A6546300FD4255 /* PBCommentPostVC.m */,
-				1506FD8F22A6548F00FD4255 /* PBSearchPostVC.h */,
-				1506FD9022A6548F00FD4255 /* PBSearchPostVC.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -643,7 +638,6 @@
 				1506FDA622A6603500FD4255 /* PBPostListCell.m in Sources */,
 				1512B99B22A8FC2A0025C36A /* NSDate+Utils.m in Sources */,
 				1506FD9922A6577000FD4255 /* PBNavigationController.m in Sources */,
-				1506FD9122A6548F00FD4255 /* PBSearchPostVC.m in Sources */,
 				1506FD4E22A650FD00FD4255 /* ViewController.m in Sources */,
 				1506FD5922A650FE00FD4255 /* main.m in Sources */,
 				1506FD9C22A658BF00FD4255 /* PBLoginVC.m in Sources */,
